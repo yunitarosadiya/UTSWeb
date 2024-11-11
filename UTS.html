@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data pengeluaran</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js" class="js">
+   <li> <a href="index.php"></a></li>
+</head>
+<body>
+    <h1>Catatan Pengeluaran</h1>
+
+    <form id="formpengeluaran" method="post" action="add_expense.php">
+        <label for="tanggal"> tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <label for="kategori"> kategori:</label>
+        <input type="text" id="kategori" name="kategori" required>
+
+        <label for="jumlah"> jumlah:</label>
+        <input type="number" id="jumlah" name="jumlah" required>
+
+        <button type="submit">Tambah Pengeluaran</button>
+    </form>
+    
+    <h2>Daftar Pengeluaran</h2>
+    <input type="text" id="filterkategori" placeholder="filterkategori">
+    <button onclick="loadpengeluaran()">tampilkan semua</button>
+    
+    <table  id="tabelpengeluaran">
+    <thead>
+        <tr>
+            <th>Tanggal</th>
+            <th>Kategori</th>
+            <th>Jumlah</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+    
+        <p id="total pengeluaran">total pengeluaran: Rp <span id="totalAmount">0.00</span></p>
+    
+        <script src="script.js"></script>
+</body>
+</html>
